@@ -47,6 +47,15 @@ For local use:
 
 ## COMMITS
 
+**_Commit 5_**
+
+Added validation for prevent blank burger to be created in models/burger.js, start to add function of customers.
+
+**_Commit 4_**
+
+Added alphabetical order by burger name in both lists. Deploy to heroku completed.
+
+
 **_Commit 3_**
 
 Readme.md file update with all information about the app. Deploy to Heroku started.

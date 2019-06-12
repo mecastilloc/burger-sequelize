@@ -23,20 +23,26 @@ app.get("/", function (req, res) {
            var object = {
            	burgersota:data
            }
-            console.log(object);
+            //console.log(object);
            res.render("index", object);
-    });
+    }).catch(function (err) {
+		// Whenever a validation or flag fails, an error is thrown
+		// We can "catch" the error to prevent it from being "thrown", which could crash our node app
+		console.log(err);
+		res.json(err);
+	});
 });
 //Create a new burger
 app.post("/api/burgers", function (req, res) {
         db.burgers.create({
 			burger_name: req.body.burger_name,
 		}).then(function (dbBurgers) {
-			// We have access to the new todo as an argument inside of the callback function
+			// We have access to the new burger as an argument inside of the callback function
 			res.json(dbBurgers);
 		}).catch(function (err) {
 			// Whenever a validation or flag fails, an error is thrown
 			// We can "catch" the error to prevent it from being "thrown", which could crash our node app
+			console.log(err);
 			res.json(err);
 		});
 });

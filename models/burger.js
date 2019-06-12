@@ -4,6 +4,9 @@ module.exports = function (sequelize, DataTypes) {
 			type: DataTypes.STRING,
 			allowNull: false,
 			freezeTableName: true,
+			validate: {
+				len: [1],
+			}
 		},
 		devoured :{
 			type: DataTypes.BOOLEAN,
