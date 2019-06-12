@@ -49,7 +49,7 @@ For local use:
 
 **_Commit 3_**
 
-Readme.md file update with all information about the app. Deploy to Heroku started. See live Demo.
+Readme.md file update with all information about the app. Deploy to Heroku started.
 
 **_Commit 2_**
 

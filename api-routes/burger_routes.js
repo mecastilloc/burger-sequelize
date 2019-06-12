@@ -14,7 +14,11 @@ module.exports = function (app) {
 
 app.get("/", function (req, res) {
     // findAll returns all entries for a table when used with no options
-		db.burgers.findAll({}).then(function (data) {
+		db.burgers.findAll({
+			order: [
+				['burger_name', 'ASC'],
+			],
+		}).then(function (data) {
            
            var object = {
            	burgersota:data
